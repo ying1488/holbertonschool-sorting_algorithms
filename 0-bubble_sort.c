@@ -39,7 +39,7 @@ void bubble_sort(int *array, size_t size)
 			{
 				printf("%d", array[k]);
 				if (k < size - 1)
-					printf(",");
+					printf(", ");
 
 			}
 			printf("\n");
