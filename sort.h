@@ -9,12 +9,13 @@
  * enum bool - Enumeration of Boolean values.
  * @false: Equals 0.
  * @true: Equals 1.
- */
-typedef enum bool
+ *
+* typedef enum bool_t
 {
-	false = 0,
-	true
-} bool;
+	enum false = 0,
+	enum true
+} bool_t;
+*/
 
 /**
  * struct listint_s - Doubly linked list node
