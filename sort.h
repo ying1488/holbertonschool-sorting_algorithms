@@ -5,17 +5,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-/**
- * enum bool - Enumeration of Boolean values.
- * @false: Equals 0.
- * @true: Equals 1.
- *
-* typedef enum bool_t
-{
-	enum false = 0,
-	enum true
-} bool_t;
-*/
 
 /**
  * struct listint_s - Doubly linked list node
@@ -26,9 +15,9 @@
  */
 typedef struct listint_s
 {
-    const int n;
-    struct listint_s *prev;
-    struct listint_s *next;
+	const int n;
+	struct listint_s *prev;
+	struct listint_s *next;
 } listint_t;
 
 void bubble_sort(int *array, size_t size);
