@@ -44,13 +44,10 @@ void bubble_sort(int *array, size_t size)
 			}
 			printf("\n");
 			swap = 1;
-		}
+			}
 
-	}
+		}
 	if (!swap)
 		break;
-
 	}
-
-
 }
