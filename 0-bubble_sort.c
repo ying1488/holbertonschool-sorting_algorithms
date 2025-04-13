@@ -5,21 +5,6 @@
 #include <stdbool.h>
 #include "sort.h"
 
-/**
- * swap - functions to swap
- * @a: pointer to a
- * @b: pointer to b
- * Return: always
-*/
-void swap(int *a, int *b)
-{
-	int tmp;
-
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
-}
-
 
 /**
  * bubble_sort - function that sorts an array of integers in
@@ -32,24 +17,40 @@ void swap(int *a, int *b)
 
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, len = size;
-	int swapped;
+	size_t i, pass, k;
+	int temp, swap;
 
 	if (array == NULL || size < 2)
 		return;
 
-	while (swapped == 0)
+	for (pass = 0; pass < size - 1; pass++)
 	{
-		swapped = 1;
-		for (i = 0; i < len - 1; i++)
+		swap = 0;
+		for (i = 0; i < size - pass - 1; i++)
 		{
 			if (array[i] > array[i + 1])
 			{
-				swap(array + i, array + i + 1);
-				print_array(array, size);
-				swapped = 0;
+				temp = array[i];
+				array[i] = array[i + 1];
+				array[i + 1] = temp;
+
+
+			for (k = 0; k < size; k++)
+			{
+				printf("%d", array[k]);
+				if (k < size - 1)
+					printf(",");
+
 			}
+			printf("\n");
+			swap = 1;
 		}
-		len--;
+
 	}
+	if (!swap)
+		break;
+
+	}
+
+
 }
