@@ -28,15 +28,15 @@ void insertion_sort_list(listint_t **list)
 			b = temp;
 			a->next = b->next;
 			if (b->next)
-				b->next->prev = a;
-				b->prev = a->prev;
-				b->next = a;
-				if (a->prev)
-					a->prev->next = b;
-				else
-					*list = b;
-				a->prev = b;
-				print_list(*list);
+				{b->next->prev = a;}
+			b->prev = a->prev;
+			b->next = a;
+			if (a->prev)
+				{a->prev->next = b;}
+			else
+				*list = b;
+			a->prev = b;
+			print_list(*list);
 			}
 		current  = current->next;
 	}
